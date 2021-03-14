@@ -4,14 +4,13 @@ version:       0.1.0.0
 license:       NONE
 author:        Alexander McCord
 maintainer:    alex@mccord.dev
-synopsis:      Interface to the mccord-dev backend
+synopsis:      The binary that contains various utilities, primarily runs the web.
 category:      Web
 
-library
+executable mccord-dev
     default-language: Haskell2010
-    hs-source-dirs:   lib
+    hs-source-dirs:   app
+    main-is:          Main.hs
 
     build-depends: base >= 4.14 && < 5
-
-    exposed-modules: McCord.Web
-                     McCord.Web.Foo
+                 , mccord-dev-engine
